@@ -1,0 +1,62 @@
+/* Responsive padding */
+@media only screen and (max-width: 991px) {
+    .s_c {
+        padding-top: 40px;
+    }
+}
+
+/* Transition for entering */
+.page-enter {
+    transform: translateY(100%); /* Start below the screen */
+}
+
+.page-enter-active {
+    transform: translateY(0%);
+    transition: transform 400ms ease-out; /* Keep transition on transform for smoother effects */
+}
+
+/* Transition for exiting */
+.page-exit {
+    transform: translateY(0%);
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+}
+
+.page-exit-active {
+    transform: translateY(-100%); /* Move off the top of the screen */
+    transition: transform 400ms ease-out; /* Keep consistent transition property */
+}
+
+/* Container max-width on larger screens */
+@media (min-width: 1400px) {
+    .container,
+    .container-lg,
+    .container-md,
+    .container-sm,
+    .container-xl,
+    .container-xxl {
+        max-width: 1140px;
+    }
+}
+
+/* Fade transition */
+.fade-enter {
+    opacity: 0;
+}
+.fade-enter-active {
+    opacity: 1;
+    transition: opacity 300ms ease-in;
+}
+.fade-exit {
+    opacity: 1;
+}
+.fade-exit-active {
+    opacity: 0;
+    transition: opacity 300ms ease-in;
+}
+
+
+  
+
