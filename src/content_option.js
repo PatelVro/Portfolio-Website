@@ -2,7 +2,7 @@ const logotext = "PATEL";
 
 const meta = {
     title: "Hill Patel",
-    description: "Aspiring Software Developer passionate about technology and innovation.",
+    description: "Developer, Engineer, Student, Learner, or even Failure – that's me but always evolving. Dedicated software developer specializing in full-stack development, automation, and web scraping. Experienced in Python, JavaScript, React, AWS, and others with a passion for solving complex problems and building innovative solutions.",
 };
 
 const introdata = {
