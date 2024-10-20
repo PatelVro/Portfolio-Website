@@ -1,4 +1,6 @@
 .po_items_ho {
+    display: flex;
+    flex-wrap: wrap;
     column-width: 15em;
     -moz-column-width: 15em;
     -webkit-column-width: 15em;
@@ -17,8 +19,7 @@
     padding: 6px;
     border: 1px solid var(--secondary-color);
     transition: 0.3s ease;
-    font-size: 0;
-    min-height: 300px;
+    min-height: 500px;
 }
 
 .po_item img {
@@ -32,7 +33,7 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background: var(--overlay-color);
+    background: rgba(12, 12, 12, 0.83);
     z-index: 1;
     display: flex;
     justify-content: center;
@@ -45,15 +46,12 @@
     border: 1px solid black;
 }
 
-.po_item .content {
-    opacity: 0;
-    transition-delay: 1s;
-    transition: 0.3s ease;
-    font-size: 20px;
-}
-
 .po_item:hover {
     box-shadow: 0 10px 15px 0 rgba(0, 0, 0, 0.25);
+}
+
+.po_item:hover .thumbnail-container {
+    filter: blur(5px);
 }
 
 .po_item:hover .content {
@@ -62,9 +60,8 @@
     opacity: 1;
 }
 
-.po_item:hover .content {
-    opacity: 1;
-    color: var(--secondary-color);
+.po_item.active .content {
+    opacity: 1; /* Show content when item is active */
 }
 
 .po_item .content a {
@@ -79,11 +76,120 @@
     text-decoration: none;
 }
 
-
-
-
-@media (max-width: 425px) {
-.loader {
-    position: relative;
+.custom-offcanvas {
+    background-color: black; /* Set background to black */
+    color: white; /* Set text color to white */
 }
+
+/* Styling for offcanvas header and body */
+.custom-offcanvas .offcanvas-header {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Optional: Add a subtle border */
+}
+
+.custom-offcanvas .offcanvas-body {
+    padding: 20px; /* Adjust padding if needed */
+    overflow-y: auto; /* Allow vertical scrolling */
+    scrollbar-width: none; /* Hide scrollbar in Firefox */
+    -ms-overflow-style: none; /* Hide scrollbar in IE and Edge */
+}
+
+.custom-offcanvas .offcanvas-body::-webkit-scrollbar {
+    display: none; /* Hides the scrollbar */
+}
+
+/* Make sure to adjust the color of any links, headings, or other text elements if they don't show up */
+.custom-offcanvas h5,
+.custom-offcanvas p {
+    color: white; /* Ensure that headings and paragraphs are also white */
+}
+
+.custom-offcanvas pre {
+    margin-top: 1rem;
+    white-space: pre-wrap; /* Wrap text in pre tags */
+}
+
+
+.custom-offcanvas .offcanvas-body iframe{
+    overflow-y: auto; /* Allow vertical scrolling */
+    scrollbar-width: none; /* Hide scrollbar in Firefox */
+    -ms-overflow-style: none; /* Hide scrollbar in IE and Edge */
+}
+
+.custom-offcanvas .offcanvas-body iframe::-webkit-scrollbar {
+    display: none; /* Hides the scrollbar */
+}
+
+/* Responsive design adjustments */
+@media (min-width: 992px) {
+    .container {
+        max-width: 850px; /* Adjust container max width */
+    }
+}
+
+@media (min-width: 768px) {
+    .po_item {
+        min-height: 370px; /* Adjust minimum height for larger screens */
+    }
+}
+
+@media (max-width: 991px) {
+    .po_item .content {
+        display: none; /* Initially hide content on smaller screens */
+    }
+
+    .po_item.active .content {
+        display: flex; /* Show content when item is active */
+    }
+
+    .po_item:hover .thumbnail-container {
+        filter: none; /* No blur effect */
+    }
+}
+
+@media (max-width: 450px) {
+    .po_item {
+        min-height: 0; /* Adjust minimum height for very small screens */
+    }
+
+    .po_item h3,
+    .po_item p,
+    .po_item button {
+        display: none; /* Hide elements on very small screens */
+    }
+
+    .custom-offcanvas{
+        width: 99% !important;
+    }
+
+    .offcanvas-header{
+        margin-top: 15px;
+    }
+
+    .offcanvas-header button{
+        background-color: white;
+    }
+
+    .offcanvas-body iframe{
+        height: 400px;
+    }
+}
+
+@media (min-width: 768px){
+
+    .custom-offcanvas{
+        width: 80% !important;
+        font-size: xx-large;
+    }
+    
+    .custom-offcanvas .offcanvas-title {
+        font-size: 30px; /* Font size for the title */
+    }
+    
+    .custom-offcanvas .offcanvas-body {
+        font-size: 20px; /* Font size for the body content */
+    }
+}
+
+@media (min-width: 1050px){
+
 }

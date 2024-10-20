@@ -1,3 +1,4 @@
+
 const logotext = "PATEL";
 
 const meta = {
@@ -19,8 +20,7 @@ const introdata = {
     description: {
         first: "I’m a software engineer with a strong foundation in ",
         second: ". I'm committed to building impactful software solutions."
-    },
-    your_img_url: "https://images.unsplash.com/photo-1514790193030-c89d266d5a9d", // Your profile image URL
+    }
 };
 
 const dataabout = {
@@ -90,35 +90,27 @@ const services = [
 
 const dataportfolio = [
     {
-        img: "https://picsum.photos/400/400?grayscale",
-        description: "Automated Ad Reposting Bot to enhance visibility.",
-        link: "#", // Link to the project
-    },
-    {
-        img: "https://picsum.photos/400/800?grayscale",
-        description: "Responsive Ads Management Web Application.",
-        link: "#", // Link to the project
-    },
-    {
-        img: "https://picsum.photos/400/400?grayscale",
-        description: "Web Scraping Script for data extraction.",
-        link: "#", // Link to the project
-    },
-    {
-        img: "https://picsum.photos/400/600?grayscale",
-        description: "WordPress website deployment on AWS.",
-        link: "#", // Link to the project
-    },
-    {
-        img: "https://picsum.photos/400/300?grayscale",
-        description: "UI/UX Design for various applications.",
-        link: "#", // Link to the project
-    },
-    {
-        img: "https://picsum.photos/400/700?grayscale",
-        description: "Innovative Mobile Apps development.",
-        link: "#", // Link to the project
-    },
+        url: "https://hillpatel.com",
+        img: "",
+        title: "Portfolio Website",
+        description: "This portfolio website serves as a showcase of my skills, projects, and experiences as a software developer. Built using React and styled with Bootstrap, the site offers a responsive and user-friendly interface, making it accessible across various devices.",
+        // link: "https://example.com/project1",
+        details: `This portfolio website serves as a showcase of my skills, projects, and experiences as a software developer. Built using React and styled with Bootstrap, the site offers a responsive and user-friendly interface, making it accessible across various devices.
+
+Key Features:
+- Dynamic Project Showcase: A visually appealing grid layout that displays a selection of my work. Visitors can view project details in a popover on hover, with each project card including a title, description, and relevant technologies.
+- Responsive Design: The layout adjusts seamlessly to different screen sizes, ensuring an optimal viewing experience on mobile, tablet, and desktop devices using Bootstrap's grid system.
+- Interactive Elements: Users can engage with interactive components, such as buttons and popovers, enhancing exploration of my projects.
+- Smooth Animations: Thoughtfully implemented animations provide a modern touch to the interface, making transitions fluid and visually appealing.
+- Personal Branding: The website integrates custom colors and typography to reflect my personal style and create a professional online presence.
+
+Technologies Used:
+- React: For building dynamic and reusable UI components.
+- Bootstrap: For responsive layout and pre-styled components.
+- CSS: Custom styles for a unique look and feel.
+
+This portfolio website highlights my technical skills and serves as a testament to my commitment to delivering high-quality web applications. Visitors can explore my journey as a developer and view my work, showcasing my expertise in modern web development technologies.`,
+    }
 ];
 
 const contactConfig = {

@@ -21,6 +21,13 @@
 html,
 body {
     height: 100%;
+    scrollbar-width: none; /* For Firefox */
+    -ms-overflow-style: none;  /* For Internet Explorer and Edge */
+
+}
+
+html::-webkit-scrollbar {
+    display: none; /* Hide the scrollbar on WebKit browsers */
 }
 
 body {
