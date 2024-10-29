@@ -1,6 +1,6 @@
-import React, { useEffect } from "react";
-import { Route, Routes} from "react-router-dom";
-import withRouter from "../hooks/withRouter"
+import React from "react";
+import { Route, Routes } from "react-router-dom";
+import withRouter from "../hooks/withRouter";
 import { Home } from "../pages/home";
 import { Portfolio } from "../pages/portfolio";
 import { ContactUs } from "../pages/contact";
@@ -23,7 +23,7 @@ const AnimatedRoutes = withRouter(({ location }) => (
         <Route path="/about" element={<About />} />
         <Route path="/portfolio" element={<Portfolio />} />
         <Route path="/contact" element={<ContactUs />} />
-        <Route path="/project/:projectId" component={<ProjectDetail/>} />
+        <Route path="/project/:projectId" element={<ProjectDetail />} />
         <Route path="*" element={<Home />} />
       </Routes>
     </CSSTransition>
@@ -31,15 +31,11 @@ const AnimatedRoutes = withRouter(({ location }) => (
 ));
 
 function AppRoutes() {
-
   return (
-    <>
-      <div className="s_c">
-        <AnimatedRoutes />
-       
-        <Socialicons />
-      </div>
-    </>
+    <div className="s_c">
+      <AnimatedRoutes />
+      <Socialicons />
+    </div>
   );
 }
 

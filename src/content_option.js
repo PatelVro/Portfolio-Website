@@ -7,7 +7,7 @@ const meta = {
 };
 
 const introdata = {
-    title: "I’m Hill Patel",
+    title: "I’m Hill Patel - Portfolio",
     animated: {
         first: "Hello World!",
     },
