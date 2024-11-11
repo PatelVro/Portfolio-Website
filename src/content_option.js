@@ -2,12 +2,12 @@
 const logotext = "PATEL";
 
 const meta = {
-    title: "Hill Patel",
+    title: "Hill Patel - Portfolio",
     description: "Developer, Engineer, Student, Learner, or even Failure – that's me but always evolving. Dedicated software developer specializing in full-stack development, automation, and web scraping. Experienced in Python, JavaScript, React, AWS, and others with a passion for solving complex problems and building innovative solutions.",
 };
 
 const introdata = {
-    title: "I’m Hill Patel - Portfolio",
+    title: "I’m Hill Patel",
     animated: {
         first: "Hello World!",
     },
