@@ -117,9 +117,9 @@ const contactConfig = {
     YOUR_EMAIL: "hillpatel1357@gmail.com", // Your email
     YOUR_FONE: "(416) 877-3865", // Your phone number
     description: "Feel free to reach out for collaborations, job opportunities, or just to connect!",
-    YOUR_SERVICE_ID: "service_id",
-    YOUR_TEMPLATE_ID: "template_id",
-    YOUR_USER_ID: "user_id",
+    YOUR_SERVICE_ID: "service_wfab0qf",
+    YOUR_TEMPLATE_ID: "template_h46a3mr",
+    YOUR_USER_ID: "xQELRyVXuLLJ-Tong",
 };
 
 const socialprofils = {
