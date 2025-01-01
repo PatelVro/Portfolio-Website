@@ -114,7 +114,7 @@ This portfolio website highlights my technical skills and serves as a testament 
 ];
 
 const contactConfig = {
-    YOUR_EMAIL: "hillpatel1357@gmail.com", // Your email
+    YOUR_EMAIL: "hill@hillpatel.com", // Your email
     YOUR_FONE: "(416) 877-3865", // Your phone number
     description: "Feel free to reach out for collaborations, job opportunities, or just to connect!",
     YOUR_SERVICE_ID: "service_wfab0qf",
