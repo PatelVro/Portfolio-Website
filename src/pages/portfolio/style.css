@@ -1,6 +1,6 @@
 .po_items_ho {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     column-width: 15em;
     -moz-column-width: 15em;
     -webkit-column-width: 15em;
@@ -44,6 +44,8 @@
     transition: 0.3s ease-in-out;
     opacity: 0;
     border: 1px solid black;
+    padding: 0 10px;
+    font-size: small;
 }
 
 .po_item:hover {
@@ -128,7 +130,7 @@
 
 @media (min-width: 768px) {
     .po_item {
-        min-height: 370px; /* Adjust minimum height for larger screens */
+        min-height: 310px; /* Adjust minimum height for larger screens */
     }
 }
 

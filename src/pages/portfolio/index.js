@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from "react";
 import "./style.css";
 import { Helmet, HelmetProvider } from "react-helmet-async";
-import { Container, Row, Button, Offcanvas } from "react-bootstrap";
+import { Container, Col, Button, Offcanvas } from "react-bootstrap";
 import { dataportfolio, meta } from "../../content_option";
 import ScrollProgressBar from "../../components/scrollprogressbar";
-import project1Img from "../../assets/images/output-_1_.svg";
+// import PortfolioWebsite from "../../assets/images/HP.webp";
 
 export const Portfolio = () => {
     const [selectedProject, setSelectedProject] = useState(null);
@@ -30,7 +30,7 @@ export const Portfolio = () => {
 
         window.addEventListener("resize", handleResize);
         return () => window.removeEventListener("resize", handleResize);
-    }, []);
+    });
 
     return (
         <>
@@ -42,16 +42,17 @@ export const Portfolio = () => {
                         <title> Portfolio | {meta.title} </title>
                         <meta name="description" content={meta.description} />
                     </Helmet>
-                    <Row className="mb-5 mt-3 pt-md-3 mb-md-0">
+                    <Col className="mb-5 mt-3 pt-md-3 mb-md-0">
                         <h1 className="display-4 mb-4"> Portfolio </h1>
                         <hr className="t_border my-4 ml-0 text-left" />
-                    </Row>
+                    </Col>
+                    
 
                     <div className="mb-5 po_items_ho mb-md-0">
                         {dataportfolio.map((data, i) => (
                             <div key={i} className="po_item" onClick={() => isMobile && handleShow(data)}>
                                 <div className="thumbnail-container">
-                                    <img src={project1Img} alt={data.title} />
+                                    <img src={data.img} alt={data.title} />
                                 </div>
                                 <div className="content">
                                     <h3>{data.title}</h3>
