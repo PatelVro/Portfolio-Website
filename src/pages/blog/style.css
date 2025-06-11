@@ -1,0 +1,70 @@
+.Blog-header {
+  background-color: #0c0c0c; /* Softer black */
+  color: #e0e0e0; /* Off-white for less eye strain */
+  min-height: 100vh;
+  padding: 0px;
+}
+
+.blog-card {
+  background-color: #1e1e1e; /* Darker card background */
+  border-left: 4px solid rgb(119, 202, 230);
+  padding: 24px;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease-in-out;
+  overflow: hidden; /* Ensures the card contains its children properly */
+}
+
+.blog-card:hover {
+  transform: translateY(-5px) scale(1.01);
+  box-shadow: 0 8px 25px rgba(119, 202, 230, 0.3);
+}
+
+.blog-card.expanded {
+  border-left-width: 8px; /* More emphasis on expanded post */
+}
+
+.blog-text {
+  color: #cccccc;
+  font-size: 1rem;
+}
+
+.text-accent {
+  color: rgb(119, 202, 230) !important; /* Important to override bootstrap */
+}
+
+.read-more-btn {
+  background-color: transparent;
+  color: rgb(119, 202, 230);
+  border: 1px solid rgb(119, 202, 230);
+  padding: 8px 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+  margin-top: 15px; /* Add some space above the button */
+}
+
+.read-more-btn:hover,
+.read-more-btn:focus {
+  background-color: rgb(119, 202, 230);
+  color: #121212 !important; /* Ensure text color changes on hover */
+  outline: none; /* Remove default focus outline */
+  box-shadow: 0 0 10px rgba(119, 202, 230, 0.5);
+}
+
+/* Clearer title and metadata styling */
+.card-title.text-accent {
+  font-size: 1.75rem;
+  font-weight: bold;
+}
+
+.card-subtitle.text-muted {
+  font-size: 0.9rem;
+  font-style: italic;
+  color: #888 !important; /* Softer color for metadata */
+}
+
+hr.t_border {
+  border-top: 2px solid rgb(119, 202, 230);
+  width: 100px;
+}

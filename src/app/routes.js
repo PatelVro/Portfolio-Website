@@ -5,9 +5,11 @@ import { Home } from "../pages/home";
 import { Portfolio } from "../pages/portfolio";
 import { ContactUs } from "../pages/contact";
 import { About } from "../pages/about";
+import { Blog } from "../pages/blog";
 import { Socialicons } from "../components/socialicons";
 import { CSSTransition, TransitionGroup } from "react-transition-group";
 import "../app/App.css";
+
 
 const AnimatedRoutes = withRouter(({ location }) => (
   <TransitionGroup>
@@ -20,6 +22,7 @@ const AnimatedRoutes = withRouter(({ location }) => (
       <Routes location={location}>
         <Route exact path="/" element={<Home />} />
         <Route exact path="/about" element={<About />} />
+        <Route exact path="/blog" element={<Blog />} />
         <Route exact path="/portfolio" element={<Portfolio />} />
         <Route exact path="/contact" element={<ContactUs />} />
         <Route exact path="*" element={<Home />} />
