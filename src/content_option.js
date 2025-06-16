@@ -117,7 +117,7 @@ Technologies Used:
 This portfolio website highlights my technical skills and serves as a testament to my commitment to delivering high-quality web applications. Visitors can explore my journey as a developer and view my work, showcasing my expertise in modern web development technologies.`,
     },
     {
-        url: "https://drmokshapatel.in",
+        url: "https://app.netlify.com/projects/drmokshapatel/deploys/6763dad04ca8df000804e445",
         img: "/physio.webp",
         title: "Physiotherapy Services Website",
         description: "A professional website for Dr. Moksha Patel, offering freelance physiotherapy services, including home visits. Built with React and styled using Tailwind CSS, this site provides an elegant and user-friendly experience tailored for clients seeking physiotherapy solutions.",
