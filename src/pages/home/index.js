@@ -5,7 +5,7 @@ import { Helmet, HelmetProvider } from "react-helmet-async";
 import { introdata, meta } from "../../content_option";
 import { Link } from "react-router-dom";
 import Typewriter from "../../components/typewriter/typewriter";
-import myPhoto from "../../assets/images/670228466a2e90.57870258Processed.webp"
+import myPhoto from "../../assets/images/670228466a2e90.57870258Processed.avif"
 import Loader from "../../components/loader/loader";
 
 export const Home = () => {
