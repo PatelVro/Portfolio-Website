@@ -21,6 +21,8 @@ export const Home = () => {
           
           <div className="h_bg-image order-1 order-lg-2 circle-image">
   <img 
+    rel="preload"
+    as="image"
     src={myPhoto} 
     alt="Hero background" 
     fetchpriority="high" 
