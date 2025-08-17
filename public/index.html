@@ -2,18 +2,38 @@
 <html lang="en">
 
 <head>
-    <meta charset="utf-8" />
-    <title>Hill Patel's Portfolio</title>
-    <meta name="description" content="Portfolio of Hill Patel, showcasing projects and skills in software and web development." />
-    <link rel="icon" href="%PUBLIC_URL%/IMG_1487.webp" type="image/webp" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
-    <meta name="author" content="Hill Patel">
+  <meta charset="utf-8" />
+  <title>Hill Patel's Portfolio</title>
+  <meta name="description" content="Portfolio of Hill Patel, showcasing projects and skills in software and web development." />
+  <link rel="icon" href="%PUBLIC_URL%/IMG_1487.webp" type="image/webp" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#000000" />
+  <meta name="author" content="Hill Patel">
 
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Marcellus&display=swap&font-display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;0,500;1,400;1,500&display=swap&font-display=swap" rel="stylesheet">
+  <!-- Preconnects -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <!-- Preload fonts (CSS + WOFF2) -->
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Marcellus&display=swap">
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;0,500;1,400;1,500&display=swap">
+  <link rel="preload" as="font" href="https://fonts.gstatic.com/s/marcellus/v13/wEO_EBrOk8hQLDvIAF8FUfAL3EsHiA.woff2" type="font/woff2" crossorigin>
+  <link rel="preload" as="font" href="https://fonts.gstatic.com/s/raleway/v36/1Ptug8zYS_SKggPN4iEgvnHyvveLxVvao.woff2" type="font/woff2" crossorigin>
+
+  <!-- Load fonts async -->
+  <link href="https://fonts.googleapis.com/css2?family=Marcellus&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+
+  <!-- No-JS fallback -->
+  <noscript>
+    <link href="https://fonts.googleapis.com/css2?family=Marcellus&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet">
+  </noscript>
+
+  <!-- Main CSS (non-deferred for stability) -->
+  <link rel="stylesheet" href="%PUBLIC_URL%/static/css/main.css">
 </head>
+
 
 <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>

@@ -5,7 +5,7 @@ import { Helmet, HelmetProvider } from "react-helmet-async";
 import { introdata, meta } from "../../content_option";
 import { Link } from "react-router-dom";
 import Typewriter from "../../components/typewriter/typewriter";
-import myPhoto from "../../assets/images/670228466a2e90.57870258Processed.png"
+import myPhoto from "../../assets/images/670228466a2e90.57870258Processed.webp"
 import Loader from "../../components/loader/loader";
 
 export const Home = () => {
@@ -19,10 +19,17 @@ export const Home = () => {
         </Helmet>
         <div className="intro_sec d-block d-lg-flex align-items-center ">
           
-          <div
-            className="h_bg-image order-1 order-lg-2 circle-image"
-            style={{ backgroundImage: `url(${myPhoto})` }}
-          ><Loader /></div>
+          <div className="h_bg-image order-1 order-lg-2 circle-image">
+  <img 
+    src={myPhoto} 
+    alt="Hero background" 
+    fetchpriority="high" 
+    decoding="async" 
+    style={{ width: "100%", height: "100%", objectFit: "cover", borderRadius: "50%" }}
+  />
+  <Loader />
+</div>
+
           <div className="text order-2 order-lg-1 h-100 d-lg-flex justify-content-center">
             <div className="align-self-center ">
               <div className="intro mx-auto">
