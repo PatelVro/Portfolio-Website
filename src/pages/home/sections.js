@@ -175,7 +175,7 @@ export const Work = ({ projects }) => {
       </div>
 
       <div ref={previewRef} className={`hov-preview ${hover ? "show" : ""}`}>
-        {hover && <img src={hover.img} alt={hover.title} />}
+        {hover && <img src={hover.img} alt={hover.title} loading="lazy" decoding="async" />}
       </div>
     </section>
   );

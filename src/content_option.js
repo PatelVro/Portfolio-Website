@@ -183,7 +183,7 @@ const skills = [
 
 const education = [
     { school: "Seneca College",                                     degree: "Diploma, Computer Programming", date: "May 2023 to Dec 2024", loc: "Toronto, CA" },
-    { school: "The Maharaja Sayajirao University of Baroda (MSUB)", degree: "Diploma",                       date: "Aug 2019 to Apr 2022", loc: "Vadodara, IN" },
+    { school: "The Maharaja Sayajirao University of Baroda (MSUB)", degree: "Diploma, Computer Engineering", date: "Aug 2019 to Apr 2022", loc: "Vadodara, IN" },
 ];
 
 const certifications = [

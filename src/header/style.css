@@ -26,6 +26,8 @@
     gap: 10px;
     font-weight: 600;
     color: var(--ink);
+    min-height: 44px;
+    padding: 4px 0;
 }
 .nav .brand .dot {
     width: 8px;
@@ -78,7 +80,9 @@
 
 .nav .menu-btn {
     display: none;
-    padding: 6px 12px;
+    min-height: 44px;
+    min-width: 44px;
+    padding: 12px 18px;
     border: 1px solid var(--line-2);
     border-radius: 999px;
     color: var(--ink-2);
@@ -86,7 +90,7 @@
     font-size: 11px;
     letter-spacing: 0.1em;
     text-transform: uppercase;
-    transition: all 0.25s ease;
+    transition: color 0.25s ease, border-color 0.25s ease;
 }
 .nav .menu-btn:hover {
     color: var(--accent);
@@ -133,9 +137,9 @@
     font-weight: 500;
     font-size: clamp(28px, 6vw, 44px);
     letter-spacing: -0.02em;
-    transition: padding 0.25s ease, color 0.25s ease;
+    transition: transform 0.25s cubic-bezier(0.2, 0.7, 0.2, 1), color 0.25s ease;
 }
-.mobile-menu a:hover { padding-left: 14px; color: var(--accent); }
+.mobile-menu a:hover { transform: translateX(14px); color: var(--accent); }
 .mobile-menu a .n {
     font-family: var(--ff-mono);
     font-weight: 400;
@@ -147,14 +151,17 @@
 /* Skip link for keyboard navigation */
 .skip-link {
     position: absolute;
-    top: -40px;
+    top: -60px;
     left: 0;
     background: var(--accent);
     color: #000;
-    padding: 8px;
+    padding: 14px 18px;
+    min-height: 44px;
     text-decoration: none;
     z-index: 100;
     font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.06em;
 }
 
 .skip-link:focus {

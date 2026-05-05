@@ -129,7 +129,8 @@
     display: inline-flex;
     align-items: center;
     gap: 10px;
-    padding: 10px 14px;
+    min-height: 44px;
+    padding: 12px 16px;
     border: 1px dashed var(--line-2);
     font-size: 11px;
     color: var(--ink-2);
@@ -437,10 +438,12 @@
     border-bottom: 1px solid var(--line);
     align-items: center;
     cursor: pointer;
-    transition: background 0.25s ease, padding 0.25s ease;
+    transition: background 0.25s ease;
     position: relative;
 }
-.work-row:hover { background: var(--bg-2); padding: 22px 14px; }
+.work-row > * { transition: transform 0.25s cubic-bezier(0.2, 0.7, 0.2, 1); }
+.work-row:hover { background: var(--bg-2); }
+.work-row:hover > * { transform: translateX(14px); }
 .work-row .num { color: var(--ink-3); font-size: 12px; }
 .work-row .name {
     font-family: var(--ff-display);
@@ -533,9 +536,9 @@
     padding: 20px 0;
     border-bottom: 1px dashed var(--line-2);
     position: relative;
-    transition: padding 0.25s ease;
+    transition: transform 0.25s cubic-bezier(0.2, 0.7, 0.2, 1);
 }
-.tl-row:hover { padding-left: 12px; }
+.tl-row:hover { transform: translateX(12px); }
 .tl-row::before {
     content: "";
     position: absolute;
@@ -741,9 +744,9 @@
     padding: 16px 0;
     border-bottom: 1px solid var(--line-2);
     font-size: 14px;
-    transition: padding 0.25s ease, color 0.25s ease;
+    transition: transform 0.25s cubic-bezier(0.2, 0.7, 0.2, 1), color 0.25s ease;
 }
-.contact .lk:hover { padding-left: 14px; color: var(--accent); }
+.contact .lk:hover { transform: translateX(14px); color: var(--accent); }
 .contact .lk .arr {
     font-size: 18px;
     color: var(--ink-3);
@@ -772,7 +775,9 @@
     font-weight: 500;
 }
 .foot .col a {
-    display: block;
+    display: flex;
+    align-items: center;
+    min-height: 44px;
     padding: 6px 0;
     color: var(--ink-2);
     transition: color 0.2s;

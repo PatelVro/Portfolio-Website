@@ -173,6 +173,7 @@ p { word-break: break-word; hyphens: auto; }
     border-radius: 50%;
     mix-blend-mode: difference;
     transition: width 0.25s, height 0.25s, border-color 0.25s, background 0.25s;
+    will-change: width, height, transform;
 }
 .cursor-dot {
     width: 5px;
@@ -209,4 +210,17 @@ p { word-break: break-word; hyphens: auto; }
 @keyframes scroll {
     from { transform: translateX(0); }
     to   { transform: translateX(-50%); }
+}
+
+/* Respect user motion preferences */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+    .reveal { opacity: 1; transform: none; }
 }
