@@ -71,6 +71,52 @@
     padding-bottom: 4px;
 }
 
+.cert_list {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+.cert_item {
+    border-bottom: 1px solid var(--secondary-color);
+}
+
+.cert_item:last-child {
+    border-bottom: none;
+}
+
+.cert_name {
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: 600;
+    display: block;
+    transition: color 0.2s ease;
+}
+
+.cert_name:hover {
+    color: var(--text-color-2, var(--text-color));
+    text-decoration: underline;
+}
+
+.cert_meta {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.9rem;
+    opacity: 0.75;
+    margin-top: 4px;
+}
+
+.cert_date {
+    font-style: italic;
+}
+
+.now_blurb {
+    opacity: 0.7;
+    font-size: 0.92rem;
+    margin-bottom: 0;
+    max-width: 56ch;
+}
+
 
 /*! CSS Used keyframes */
 

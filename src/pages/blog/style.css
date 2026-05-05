@@ -1,70 +1,75 @@
 .Blog-header {
-  background-color: #0c0c0c; /* Softer black */
-  color: #e0e0e0; /* Off-white for less eye strain */
   min-height: 100vh;
-  padding: 0px;
+  padding: 0;
+  color: var(--text-color);
 }
 
 .blog-card {
-  background-color: #1e1e1e; /* Darker card background */
-  border-left: 4px solid rgb(119, 202, 230);
-  padding: 24px;
+  background-color: transparent;
+  border: 1px solid var(--secondary-color);
   border-radius: 8px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-  transition: all 0.3s ease-in-out;
-  overflow: hidden; /* Ensures the card contains its children properly */
+  padding: 1.5rem;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.18);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+  overflow: hidden;
 }
 
 .blog-card:hover {
-  transform: translateY(-5px) scale(1.01);
-  box-shadow: 0 8px 25px rgba(119, 202, 230, 0.3);
+  transform: translateY(-3px);
+  border-color: lightblue;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.25);
 }
 
 .blog-card.expanded {
-  border-left-width: 8px; /* More emphasis on expanded post */
+  border-color: lightblue;
 }
 
 .blog-text {
-  color: #cccccc;
+  color: var(--text-color);
+  opacity: 0.9;
   font-size: 1rem;
+  line-height: 1.65;
 }
 
 .text-accent {
-  color: rgb(119, 202, 230) !important; /* Important to override bootstrap */
+  color: lightblue !important;
 }
 
 .read-more-btn {
   background-color: transparent;
-  color: rgb(119, 202, 230);
-  border: 1px solid rgb(119, 202, 230);
-  padding: 8px 16px;
-  border-radius: 5px;
+  color: lightblue;
+  border: 1px solid lightblue;
+  padding: 0.4rem 1rem;
+  border-radius: 999px;
   cursor: pointer;
-  transition: background-color 0.3s, color 0.3s;
-  margin-top: 15px; /* Add some space above the button */
+  transition: background-color 0.2s ease, color 0.2s ease, transform 0.15s ease;
+  margin-top: 0.75rem;
+  font-size: 0.875rem;
+  letter-spacing: 0.02em;
 }
 
 .read-more-btn:hover,
 .read-more-btn:focus {
-  background-color: rgb(119, 202, 230);
-  color: #121212 !important; /* Ensure text color changes on hover */
-  outline: none; /* Remove default focus outline */
-  box-shadow: 0 0 10px rgba(119, 202, 230, 0.5);
+  background-color: lightblue;
+  color: var(--bg-color, #121212) !important;
+  outline: none;
+  transform: translateY(-1px);
 }
 
-/* Clearer title and metadata styling */
 .card-title.text-accent {
-  font-size: 1.75rem;
-  font-weight: bold;
+  font-size: 1.6rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
 }
 
 .card-subtitle.text-muted {
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   font-style: italic;
-  color: #888 !important; /* Softer color for metadata */
+  opacity: 0.6;
 }
 
 hr.t_border {
-  border-top: 2px solid rgb(119, 202, 230);
+  border-top: 2px solid var(--text-color);
   width: 100px;
+  opacity: 0.5;
 }

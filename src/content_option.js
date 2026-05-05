@@ -1,198 +1,282 @@
-
-const logotext = "PATEL";
+/* =====================================================================
+   Hill Patel — Portfolio v3.0.0
+   Content data — single source of truth for the long-scroll redesign.
+   ===================================================================== */
 
 const meta = {
-    title: "Hill Patel - Portfolio",
-    description: "Developer, Engineer, Student, Learner, or even Failure – that's me but always evolving. Dedicated software developer specializing in full-stack development, automation, and web scraping. Experienced in Python, JavaScript, React, AWS, and others with a passion for solving complex problems and building innovative solutions.",
+    title: "Hill Patel — Operations & Systems Lead",
+    description: "Hill Patel: Operations & Systems Lead. Marketplace operations, pricing strategy, automation, platform integration, full-stack web.",
+    name: "Hill Patel",
+    handle: "@patelvro",
+    role: "Operations & Systems Lead",
+    location: "Toronto, CA",
+    timezone: "EST / UTC-5",
+    email: "hill@hillpatel.com",
+    phone: "+1 416 877 3865",
+    tagline: "I let bots and AI handle the repetitive stuff so people don’t have to.",
+    blurb: "Operations leadership by day: pricing, marketplaces, integrations, and team. Python, JavaScript, React, and SQL the rest of the time. I ship automation, scrapers, dashboards, and trading systems that quietly run themselves.",
+    version: "3.0.0",
 };
 
-const introdata = {
-    title: "I’m Hill Patel",
-    animated: {
-        first: "Hello World!",
-    },
-    service: {
-        first: "Web Development",
-        second: "Mobile App Development",
-        third: "Data Scraping",
-        fourth: "Automation Solutions"
-    },
-    description: {
-        first: "I’m a software engineer with a strong foundation in ",
-        second: ". I'm committed to building impactful software solutions."
-    }
+const status = {
+    label: "Currently building",
+    project: "Cirelay Trader",
+    blurb: "9-strategy ensemble across BTC / ETH / SOL. Paper-and-live, CAD-journaled.",
+    href: "https://github.com/PatelVro/Cirelay-Trader",
 };
 
-const dataabout = {
-    title: "A bit about myself",
-    aboutme: "I am a dedicated software developer with experience in full-stack development, automation, and web scraping. I thrive on solving complex problems and continuously improving my skills.",
+const about = {
+    title: "About",
+    body: [
+        "I’m an Operations & Systems Lead who builds automation around the work nobody wants to repeat. By day I lead a team across marketplace operations, pricing strategy, platform integrations, and digital marketing. I keep inventory, e-commerce, accounting, and ERP workflows talking to each other, and train the team that runs them.",
+        "The rest of the time I’m writing Python, JavaScript, and React to ship websites, data scrapers, and bots that quietly do the boring parts on autopilot. The first bot I shipped replaced a 30 to 45 minute daily chore. Six days a week. I haven’t stopped since.",
+    ],
+    facts: [
+        ["Based",       "Toronto, ON"],
+        ["Origin",      "Vadodara, IN"],
+        ["Stack",       "Python · JS · SQL · Go"],
+        ["Day job",     "Operations & Systems Lead"],
+        ["After hours", "Bots, scrapers, traders"],
+        ["Languages",   "EN · HI · GU"],
+    ],
 };
-
-const worktimeline = [
-    {
-        jobtitle: "Software / E-commerce Associate",
-        where: "Canadian Outlet",
-        date: "Jan 2024 - Present",
-    },
-    {
-        jobtitle: "Freelancer",
-        where: "Somewhere",
-        date: "Mar 2023 - Present",
-    },
-    // {
-    //     jobtitle: "Sales Associate / Cashier",
-    //     where: "Mega Continental - Joe Fresh Pop Up Store",
-    //     date: "Jul 2023 - Jan 2024",
-    // },
-    {
-        jobtitle: "Software Developer",
-        where: "Grasphopp Pvt. Ltd.",
-        date: "Sep 2022 - Mar 2023",
-    },
-];
-
-const skills = [
-    {
-        name: "Python",
-        value: 90,
-    },
-    {
-        name: "JavaScript",
-        value: 85,
-    },
-    {
-        name: "Django",
-        value: 80,
-    },
-    {
-        name: "React",
-        value: 70,
-    },
-    {
-        name: "SQL",
-        value: 80,
-    },
-];
 
 const services = [
     {
-        title: "Full Stack Web Development",
-        description: "Building responsive and user-friendly web applications using modern technologies.",
+        n: "01",
+        title: "Process Automation & Bots",
+        desc: "Scripts and bots that take repetitive workflows (reposting, scraping, reporting, syncing) off your plate.",
+        stack: ["Python", "Selenium", "Cron", "Headless Chrome"],
     },
     {
-        title: "Automation Solutions",
-        description: "Creating automated tools to enhance productivity and efficiency in business processes.",
+        n: "02",
+        title: "Marketplace Ops & Pricing",
+        desc: "Multi-channel listings and pricing across Facebook, Kijiji, and direct e-commerce. Inventory, accounting, and ERP kept in sync. Team trained on the playbook.",
+        stack: ["Pricing", "Multi-channel", "ERP Sync", "Inventory"],
     },
     {
-        title: "Data Scraping",
-        description: "Extracting valuable data from websites for market analysis and business intelligence.",
+        n: "03",
+        title: "Data Scraping & Pipelines",
+        desc: "Pulling structured data (prices, listings, content) out of unstructured websites that fight back.",
+        stack: ["Playwright", "Undetected-Chromedriver", "ETL", "ChromaDB"],
     },
     {
-        title: "Cross-Platform Mobile App Development",
-        description: "Developing mobile applications that run seamlessly on both iOS and Android platforms from a single codebase."
-    }
+        n: "04",
+        title: "Full-Stack Web Development",
+        desc: "Responsive sites, dashboards, and small-business platforms. Portfolio sites to booking systems.",
+        stack: ["React", "Node", "Spring Boot", "Tailwind"],
+    },
 ];
 
-const dataportfolio = [
+const work = [
     {
-        url: "https://hillpatel.com",
-        img: "/HP.webp",
-        title: "Portfolio Website",
-        description: "This portfolio website serves as a showcase of my skills, projects, and experiences as a software developer. Built using React and styled with Bootstrap, the site offers a responsive and user-friendly interface, making it accessible across various devices.",
-        // link: "https://example.com/project1",
-        details: `This portfolio website serves as a showcase of my skills, projects, and experiences as a software developer. Built using React and styled with Bootstrap, the site offers a responsive and user-friendly interface, making it accessible across various devices.
-
-Key Features:
-- Dynamic Project Showcase: A visually appealing grid layout that displays a selection of my work. Visitors can view project details in a popover on hover, with each project card including a title, description, and relevant technologies.
-- Responsive Design: The layout adjusts seamlessly to different screen sizes, ensuring an optimal viewing experience on mobile, tablet, and desktop devices using Bootstrap's grid system.
-- Interactive Elements: Users can engage with interactive components, such as buttons and popovers, enhancing exploration of my projects.
-- Smooth Animations: Thoughtfully implemented animations provide a modern touch to the interface, making transitions fluid and visually appealing.
-- Personal Branding: The website integrates custom colors and typography to reflect my personal style and create a professional online presence.
-
-Technologies Used:
-- React: For building dynamic and reusable UI components.
-- Bootstrap: For responsive layout and pre-styled components.
-- CSS: Custom styles for a unique look and feel.
-
-This portfolio website highlights my technical skills and serves as a testament to my commitment to delivering high-quality web applications. Visitors can explore my journey as a developer and view my work, showcasing my expertise in modern web development technologies.`,
+        slug: "cirelay",
+        title: "Cirelay Trader",
+        year: "2026",
+        role: "Solo build",
+        tags: ["Python", "Trading", "Backtest", "Live"],
+        img: "/projects/cirelay.png",
+        summary: "Local, multi-asset autonomous trading system. 9-strategy ensemble runs daily on BTC / ETH / SOL with paper-and-live modes and CAD-journaled fills.",
+        stats: [["Tests", "512"], ["Sharpe", "1.43"], ["Max DD", "-32%"], ["Backtest", "13yr"]],
+        url: "https://github.com/PatelVro/Cirelay-Trader",
     },
     {
-        url: "https://app.netlify.com/projects/drmokshapatel/deploys/6763dad04ca8df000804e445",
-        img: "/physio.webp",
-        title: "Physiotherapy Services Website",
-        description: "A professional website for Dr. Moksha Patel, offering freelance physiotherapy services, including home visits. Built with React and styled using Tailwind CSS, this site provides an elegant and user-friendly experience tailored for clients seeking physiotherapy solutions.",
-        // link: "https://example.com/project2",
-        details: `This website is designed to highlight Dr. Moksha Patel's expertise and physiotherapy services. Built with React and styled using Tailwind CSS, the site focuses on simplicity, accessibility, and professional branding to attract clients.
-    
-Key Features:
-- Service Showcase: Detailed sections presenting physiotherapy services such as pain management, rehabilitation, and home visit consultations. Each service is displayed with descriptions and benefits.
-- Booking System: An intuitive form that allows clients to book appointments easily, ensuring quick and hassle-free scheduling.
-- Testimonials Section: Displays client feedback to build trust and credibility.
-- Contact and Inquiry Forms: Enables visitors to reach out directly for queries or consultation requests, simplifying communication.
-- Responsive Design: Optimized for all devices—mobile, tablet, and desktop—offering a seamless browsing experience.
-- Smooth Animations: Subtle transitions and animations make navigation engaging and modern.
-- SEO Optimization: Implemented SEO strategies to improve visibility on search engines and attract local clients.
-    
-Technologies Used:
-- React: For dynamic UI components and state management.
-- Tailwind CSS: For flexible and responsive styling.
-- EmailJS: For integrating contact forms with email notifications.
-- CSS Animations: To enhance visual appeal.
-    
-This website reflects Dr. Moksha Patel's commitment to providing high-quality physiotherapy care while showcasing her expertise and professionalism. It acts as an effective platform for reaching new clients and managing bookings efficiently.`
+        slug: "triatomine",
+        title: "Triatomine",
+        year: "2025",
+        role: "Solo build",
+        tags: ["Python", "Playwright", "Anti-bot"],
+        img: "/projects/triatomine.png",
+        summary: "Tiered scraper that escalates HTTP, then headless, then stealth, then real Chrome until the page gives up its data. Local-only, no API keys.",
+        stats: [["Tiers", "4"], ["Local", "100%"], ["Cost", "$0/mo"]],
+        url: "https://github.com/PatelVro/Triatomine",
     },
     {
-        url: "/kjj2.png",
-        img: "kjj.jpg",
-        title: "Kijiji Reposting Bot",
-        description: "An automation tool designed to repost ads on Kijiji efficiently. Built using Python and Selenium, it streamlines ad reposting tasks, saving time and boosting visibility for listings.",
-        // link: "https://example.com/project3",
-        details: `The Kijiji Reposting Bot automates the process of reposting ads on Kijiji, helping users maintain visibility and attract more buyers. It simplifies repetitive tasks and reduces manual effort, providing an efficient solution for ad management.
-    
-Key Features:
-- Automated Reposting: Deletes and reposts ads with updated timestamps to ensure listings appear fresh and remain at the top of search results.
-- Multi-Account Support: Allows users to manage multiple Kijiji accounts for posting ads under different profiles.
-- Custom Scheduling: Enables scheduling reposts at specific intervals, providing flexibility for ad management.
-- Error Handling: Built-in mechanisms to handle login failures, CAPTCHA challenges, and session timeouts, ensuring smooth operation.
-- Log Tracking: Keeps detailed logs of reposting activities, including timestamps and errors, for monitoring and debugging.
-- Headless Mode: Supports headless browsing, allowing the bot to operate in the background without interfering with other tasks.
-    
-Technologies Used:
-- Python: Core programming language for scripting and logic.
-- Selenium: Web automation framework for browser interactions.
-- ChromeDriver: For running automated tasks in Chrome.
-- JSON: Configuration file handling for dynamic input and settings.
-    
-This Kijiji Reposting Bot is a powerful automation tool that optimizes ad posting workflows, increasing efficiency and maximizing listing visibility. It is ideal for businesses and individuals looking to save time while improving their ad performance.`
-    }
-    
-    
+        slug: "northstar",
+        title: "Northstar Trading",
+        year: "2025",
+        role: "Solo build",
+        tags: ["Go", "IBKR", "Alpaca", "Binance"],
+        img: "/projects/northstar.png",
+        summary: "Go-based trading engine with unified strategy interface across IBKR, Alpaca, and Binance. One binary, three brokers.",
+        stats: [["Brokers", "3"], ["Lang", "Go"], ["Type", "Long-running"]],
+        url: "https://github.com/PatelVro/Northstar-Trading",
+    },
+    {
+        slug: "erp",
+        title: "ERPNext × WooCommerce",
+        year: "2024",
+        role: "Custom dev",
+        tags: ["Frappe", "Python", "WooCommerce"],
+        img: "/projects/erp.png",
+        summary: "Custom ERPNext branch with two-way WooCommerce sync (products, orders, inventory). For shops on ERPNext that sell on Woo.",
+        stats: [["Sync", "2-way"], ["Stack", "Frappe"]],
+        url: "https://github.com/PatelVro/Enterprise-Resource-Planning",
+    },
+    {
+        slug: "chatboy",
+        title: "ChatBoy",
+        year: "2024",
+        role: "Solo build",
+        tags: ["FastAPI", "Ollama", "RAG"],
+        img: "/projects/chatboy.png",
+        summary: "Offline, privacy-first AI chatbot. Drop in your docs, it builds a vector index locally. No data leaves the machine.",
+        stats: [["Mode", "Offline"], ["Vector", "ChromaDB"]],
+        url: "https://github.com/PatelVro/chatboy",
+    },
+    {
+        slug: "void",
+        title: "Void",
+        year: "2024",
+        role: "Experiment",
+        tags: ["JS", "Lenis", "CSS"],
+        img: "/projects/void.png",
+        summary: "Scroll-driven editorial experience. Smooth scroll, staggered reveals, parallax that does not break on touch.",
+        stats: [["Build", "No-step"], ["Stack", "Vanilla"]],
+        url: "https://patelvro.github.io/Void/",
+    },
+    {
+        slug: "physio",
+        title: "Dr. Moksha Patel",
+        year: "2024",
+        role: "Client",
+        tags: ["React", "Tailwind", "EmailJS"],
+        img: "/projects/physio.webp",
+        summary: "Editorial site for a freelance physiotherapy practice in Vadodara. Quiet, type-led, calm. Not aggressive sales copy.",
+        stats: [["Brief", "Editorial"], ["Live", "Yes"]],
+        url: "https://drmokshapatel.in",
+    },
+    {
+        slug: "kijiji",
+        title: "Kijiji Ad Reposter",
+        year: "2023",
+        role: "First bot",
+        tags: ["Python", "Selenium"],
+        img: "/projects/kijiji.png",
+        summary: "The bot that started it all. Selenium script that deletes and reposts about 30 ads daily so listings stay top-of-search.",
+        stats: [["Saved", "45min/day"], ["Days", "6/week"]],
+        url: "https://github.com/PatelVro/Kijiji-Ad-Reposter",
+    },
 ];
 
-const contactConfig = {
-    YOUR_EMAIL: "hill@hillpatel.com", // Your email
-    YOUR_FONE: "(416) 877-3865", // Your phone number
-    description: "Feel free to reach out ..., Just to connect!",
-    YOUR_SERVICE_ID: "service_wfab0qf",
-    YOUR_TEMPLATE_ID: "template_h46a3mr",
-    YOUR_USER_ID: "xQELRyVXuLLJ-Tong",
-};
+const timeline = [
+    { y: "2024 to Now",  role: "Operations & Systems Lead", co: "Canadian Outlet",      note: "Lead and supervise operational team across marketplaces and inventory. Manage pricing strategy across Facebook, Kijiji, and company website. Design and implement automation systems. Integrate inventory, e-commerce, accounting, and ERP platforms. Oversee digital marketing (Google Ads, email, SMS). Train team on marketplace operations." },
+    { y: "2023 to Now",  role: "Freelance Software Developer",             co: "Remote",                note: "Automation, scrapers, websites. Python / React / Selenium." },
+    { y: "2023 to 2024", role: "Sales Associate / Cashier",                co: "Continental Group",     note: "Customer-facing role while finishing diploma." },
+    { y: "2022 to 2023", role: "Software Developer",                       co: "GraspHopp Pvt. Ltd.",   note: "Full-stack web work, internal tools." },
+];
 
-const socialprofils = {
-    github: "https://github.com/PatelVro", // Your GitHub profile
-    linkedin: "https://www.linkedin.com/in/hillpatel/", // Your LinkedIn profile
+const skills = [
+    { name: "Python",                v: 90, group: "Languages" },
+    { name: "JavaScript",            v: 85, group: "Languages" },
+    { name: "SQL",                   v: 85, group: "Languages" },
+    { name: "Go",                    v: 60, group: "Languages" },
+    { name: "Selenium / Playwright", v: 88, group: "Automation" },
+    { name: "Cron / Schedulers",     v: 80, group: "Automation" },
+    { name: "Headless Chrome",       v: 82, group: "Automation" },
+    { name: "React",                 v: 78, group: "Frontend" },
+    { name: "Tailwind",              v: 75, group: "Frontend" },
+    { name: "AWS",                   v: 70, group: "Infra" },
+    { name: "FastAPI / Node",        v: 72, group: "Infra" },
+    { name: "Frappe / ERPNext",      v: 70, group: "Infra" },
+];
+
+const education = [
+    { school: "Seneca College",                                     degree: "Diploma, Computer Programming", date: "May 2023 to Dec 2024", loc: "Toronto, CA" },
+    { school: "The Maharaja Sayajirao University of Baroda (MSUB)", degree: "Diploma",                       date: "Aug 2019 to Apr 2022", loc: "Vadodara, IN" },
+];
+
+const certifications = [
+    { name: "Fundamentals of Agile Project Management",      org: "PMI",           date: "Oct 2024" },
+    { name: "Fundamentals of Predictive Project Management", org: "PMI",           date: "Oct 2024" },
+    { name: "Software Engineer Intern",                      org: "HackerRank",    date: "Sep 2024" },
+    { name: "JavaScript (Intermediate)",                     org: "HackerRank",    date: "Sep 2024" },
+    { name: "Solutions Architecture Virtual Experience",     org: "AWS / Forage",  date: "Jun 2023" },
+    { name: "Back-End Engineering Virtual Experience",       org: "Lyft / Forage", date: "Jun 2023" },
+    { name: "JavaScript (Basic)",                            org: "HackerRank",    date: "Jun 2023" },
+];
+
+const languages = [
+    { name: "English",  level: "Professional working" },
+    { name: "Hindi",    level: "Full professional" },
+    { name: "Gujarati", level: "Native / bilingual" },
+];
+
+const social = {
+    github:    "https://github.com/PatelVro",
+    linkedin:  "https://www.linkedin.com/in/hillpatel/",
     instagram: "https://www.instagram.com/_hillpatel/",
 };
 
+const marqueeUpper = [
+    "AUTOMATION",
+    "MARKETPLACE OPS",
+    "ANALYTICS",
+    "PLATFORM INTEGRATIONS",
+    "DIGITAL MARKETING",
+    "FULL-STACK WEB",
+    "BOTS · SCRAPERS · DASHBOARDS",
+];
+
+const marqueeLower = [
+    "PYTHON",
+    "JAVASCRIPT",
+    "REACT",
+    "SQL",
+    "GO",
+    "AWS",
+    "PLAYWRIGHT",
+    "FASTAPI",
+    "FRAPPE",
+    "OLLAMA",
+];
+
+const tickerRows = [
+    ["BUILD",     "v3.0.0"],
+    ["UPTIME",    "∞"],
+    ["TIMEZONE",  "EST / UTC-5"],
+    ["LATENCY",   "8ms"],
+    ["PROJECTS",  "08 SHIPPED"],
+    ["STATUS",    "ALL GREEN"],
+    ["NOW",       "CIRELAY-TRADER"],
+    ["INBOX",     "OPEN"],
+];
+
+const navLinks = [
+    ["work",     "Work"],
+    ["services", "Services"],
+    ["about",    "About"],
+    ["timeline", "Career"],
+    ["skills",   "Skills"],
+    ["contact",  "Contact"],
+];
+
+const logotext = "HILL_PATEL";
+
+const contactConfig = {
+    YOUR_EMAIL: meta.email,
+    YOUR_FONE: meta.phone,
+};
+
+const socialprofils = social;
+
 export {
     meta,
-    dataabout,
-    dataportfolio,
-    worktimeline,
-    skills,
+    status,
+    about,
     services,
-    introdata,
+    work,
+    timeline,
+    skills,
+    education,
+    certifications,
+    languages,
+    social,
+    marqueeUpper,
+    marqueeLower,
+    tickerRows,
+    navLinks,
+    logotext,
     contactConfig,
     socialprofils,
-    logotext,
 };

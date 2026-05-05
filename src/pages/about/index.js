@@ -13,6 +13,10 @@ import {
   worktimeline,
   skills,
   services,
+  education,
+  certifications,
+  languages,
+  currentlyBuilding,
 } from "../../content_option";
 
 export const About = () => {
@@ -39,12 +43,23 @@ export const About = () => {
             <Col lg="7" className="d-flex align-items-center">
               <div>
                 <p>{dataabout.aboutme}</p>
+                <a
+                  href={currentlyBuilding.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="now_building mt-3"
+                >
+                  <span className="now_dot" aria-hidden="true" />
+                  <span className="now_label">{currentlyBuilding.label}:</span>
+                  <span className="now_project">{currentlyBuilding.project}</span>
+                </a>
+                <p className="now_blurb mt-2">{currentlyBuilding.blurb}</p>
               </div>
             </Col>
           </Row>
           <Row className=" sec_sp">
             <Col lg="5">
-              <h3 className="color_sec py-4">Work Timline</h3>
+              <h3 className="color_sec py-4">Work Timeline</h3>
             </Col>
             <Col lg="7">
               <table className="table caption-top">
@@ -119,8 +134,66 @@ export const About = () => {
           </Row>
 
           <Row className="sec_sp">
-            <Col lang="5">
-              <h3 className="color_sec py-4">services</h3>
+            <Col lg="5">
+              <h3 className="color_sec py-4">Education</h3>
+            </Col>
+            <Col lg="7">
+              <table className="table caption-top">
+                <tbody>
+                  {education.map((data, i) => (
+                    <tr key={i}>
+                      <th scope="row">{data.school}</th>
+                      <td>{data.degree}</td>
+                      <td>{data.date}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </Col>
+          </Row>
+
+          <Row className="sec_sp">
+            <Col lg="5">
+              <h3 className="color_sec py-4">Certifications</h3>
+            </Col>
+            <Col lg="7">
+              <ul className="cert_list">
+                {certifications.map((data, i) => (
+                  <li key={i} className="cert_item py-2">
+                    <a href={data.url} target="_blank" rel="noopener noreferrer" className="cert_name">
+                      {data.name}
+                    </a>
+                    <div className="cert_meta">
+                      <span>{data.authority}</span>
+                      <span className="cert_date">{data.date}</span>
+                    </div>
+                  </li>
+                ))}
+              </ul>
+            </Col>
+          </Row>
+
+          <Row className="sec_sp">
+            <Col lg="5">
+              <h3 className="color_sec py-4">Languages</h3>
+            </Col>
+            <Col lg="7">
+              <table className="table caption-top">
+                <tbody>
+                  {languages.map((data, i) => (
+                    <tr key={i}>
+                      <th scope="row">{data.name}</th>
+                      <td>{data.level}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </Col>
+          </Row>
+
+          <Row className="sec_sp">
+            <Col lg="5">
+              <h3 className="color_sec py-4">Services</h3>
             </Col>
             <Col lg="7">
               {services.map((data, i) => {

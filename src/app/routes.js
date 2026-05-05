@@ -1,47 +1,19 @@
-import React, { useEffect } from "react";
-import { Route, Routes} from "react-router-dom";
-import withRouter from "../hooks/withRouter"
+import React from "react";
+import { Route, Routes, Navigate } from "react-router-dom";
 import { Home } from "../pages/home";
-import { Portfolio } from "../pages/portfolio";
-import { ContactUs } from "../pages/contact";
-import { About } from "../pages/about";
-import { Blog } from "../pages/blog";
-import { Socialicons } from "../components/socialicons";
-import { CSSTransition, TransitionGroup } from "react-transition-group";
-import "../app/App.css";
 
-
-const AnimatedRoutes = withRouter(({ location }) => (
-  <TransitionGroup>
-    <CSSTransition
-      key={location.pathname}
-      classNames="fade"
-      timeout={300}
-      unmountOnExit
-    >
-      <Routes location={location}>
-        <Route exact path="/" element={<Home />} />
-        <Route exact path="/about" element={<About />} />
-        <Route exact path="/blog" element={<Blog />} />
-        <Route exact path="/portfolio" element={<Portfolio />} />
-        <Route exact path="/contact" element={<ContactUs />} />
-        <Route exact path="*" element={<Home />} />
-      </Routes>
-    </CSSTransition>
-  </TransitionGroup>
-));
-
-function AppRoutes() {
-
-  return (
-    <>
-      <div className="s_c">
-        <AnimatedRoutes />
-       
-        <Socialicons />
-      </div>
-    </>
-  );
-}
+const AppRoutes = () => (
+  <Routes>
+    <Route path="/" element={<Home />} />
+    {/* Old multi-page paths redirect to anchors on the long-scroll Home. */}
+    <Route path="/about"     element={<Navigate to="/#about"     replace />} />
+    <Route path="/portfolio" element={<Navigate to="/#work"      replace />} />
+    <Route path="/work"      element={<Navigate to="/#work"      replace />} />
+    <Route path="/services"  element={<Navigate to="/#services"  replace />} />
+    <Route path="/blog"      element={<Navigate to="/"           replace />} />
+    <Route path="/contact"   element={<Navigate to="/#contact"   replace />} />
+    <Route path="*"          element={<Navigate to="/"           replace />} />
+  </Routes>
+);
 
 export default AppRoutes;
