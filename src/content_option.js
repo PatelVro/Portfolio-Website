@@ -20,9 +20,9 @@ const meta = {
 
 const status = {
     label: "Currently building",
-    project: "Cirelay Trader",
-    blurb: "9-strategy ensemble across BTC / ETH / SOL. Paper-and-live, CAD-journaled.",
-    href: "https://github.com/PatelVro/Cirelay-Trader",
+    project: "Automation systems",
+    blurb: "Trading, scraping, and integration tools for marketplace operations.",
+    href: "#work",
 };
 
 const about = {
@@ -69,17 +69,6 @@ const services = [
 ];
 
 const work = [
-    {
-        slug: "cirelay",
-        title: "Cirelay Trader",
-        year: "2026",
-        role: "Solo build",
-        tags: ["Python", "Trading", "Backtest", "Live"],
-        img: "/projects/cirelay.png",
-        summary: "Local, multi-asset autonomous trading system. 9-strategy ensemble runs daily on BTC / ETH / SOL with paper-and-live modes and CAD-journaled fills.",
-        stats: [["Tests", "512"], ["Sharpe", "1.43"], ["Max DD", "-32%"], ["Backtest", "13yr"]],
-        url: "https://github.com/PatelVro/Cirelay-Trader",
-    },
     {
         slug: "triatomine",
         title: "Triatomine",
@@ -238,7 +227,7 @@ const tickerRows = [
     ["LATENCY",   "8ms"],
     ["PROJECTS",  "08 SHIPPED"],
     ["STATUS",    "ALL GREEN"],
-    ["NOW",       "CIRELAY-TRADER"],
+    ["NOW",       "AUTOMATION"],
     ["INBOX",     "OPEN"],
 ];
 

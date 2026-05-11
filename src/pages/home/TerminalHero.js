@@ -1,25 +1,25 @@
 import React, { useEffect, useMemo, useState } from "react";
 
 const HERO_LINES = [
-  { t: "pf", s: "hill@cirelay" }, { t: "di", s: ":" }, { t: "kw", s: "~/portfolio" }, { t: "pf", s: "$ " }, { t: "cm", s: "whoami --verbose\n" },
+  { t: "pf", s: "hill@portfolio" }, { t: "di", s: ":" }, { t: "kw", s: "~/portfolio" }, { t: "pf", s: "$ " }, { t: "cm", s: "whoami --verbose\n" },
   { t: "di", s: "> Operations & Systems Lead, Toronto, CA\n" },
   { t: "di", s: "> Day: pricing, marketplaces, integrations, team.\n" },
   { t: "di", s: "> Night: Python, JavaScript, React, bots.\n\n" },
 
-  { t: "pf", s: "hill@cirelay" }, { t: "di", s: ":" }, { t: "kw", s: "~/portfolio" }, { t: "pf", s: "$ " }, { t: "cm", s: "cat now.txt\n" },
-  { t: "di", s: "> Building " }, { t: "hi", s: "Cirelay Trader" }, { t: "di", s: ", a 9-strategy ensemble\n" },
+  { t: "pf", s: "hill@portfolio" }, { t: "di", s: ":" }, { t: "kw", s: "~/portfolio" }, { t: "pf", s: "$ " }, { t: "cm", s: "cat now.txt\n" },
+  { t: "di", s: "> Building a " }, { t: "hi", s: "9-strategy ensemble" }, { t: "di", s: "\n" },
   { t: "di", s: "  on BTC / ETH / SOL. Sharpe " }, { t: "num", s: "1.43" }, { t: "di", s: ", MaxDD " }, { t: "num", s: "-32%" }, { t: "di", s: ".\n\n" },
 
-  { t: "pf", s: "hill@cirelay" }, { t: "di", s: ":" }, { t: "kw", s: "~/portfolio" }, { t: "pf", s: "$ " }, { t: "cm", s: "ls -la stack/\n" },
+  { t: "pf", s: "hill@portfolio" }, { t: "di", s: ":" }, { t: "kw", s: "~/portfolio" }, { t: "pf", s: "$ " }, { t: "cm", s: "ls -la stack/\n" },
   { t: "di", s: "drwx " }, { t: "hi", s: "python/" }, { t: "di", s: "  drwx " }, { t: "hi", s: "javascript/" }, { t: "di", s: "  drwx " }, { t: "hi", s: "sql/" }, { t: "di", s: "\n" },
   { t: "di", s: "drwx " }, { t: "hi", s: "react/" }, { t: "di", s: "   drwx " }, { t: "hi", s: "go/" }, { t: "di", s: "          drwx " }, { t: "hi", s: "aws/" }, { t: "di", s: "\n\n" },
 
-  { t: "pf", s: "hill@cirelay" }, { t: "di", s: ":" }, { t: "kw", s: "~/portfolio" }, { t: "pf", s: "$ " }, { t: "cm", s: "systemctl status portfolio\n" },
+  { t: "pf", s: "hill@portfolio" }, { t: "di", s: ":" }, { t: "kw", s: "~/portfolio" }, { t: "pf", s: "$ " }, { t: "cm", s: "systemctl status portfolio\n" },
   { t: "ok", s: "● portfolio.service, active (running)\n" },
   { t: "di", s: "  Loaded: loaded (" }, { t: "hi", s: "/etc/hill/portfolio.conf" }, { t: "di", s: ")\n" },
   { t: "di", s: "  Memory: 0.0%   CPU: 0.1%   Uptime: ∞\n\n" },
 
-  { t: "pf", s: "hill@cirelay" }, { t: "di", s: ":" }, { t: "kw", s: "~/portfolio" }, { t: "pf", s: "$ " }, { t: "cm", s: 'echo "scroll for more"' },
+  { t: "pf", s: "hill@portfolio" }, { t: "di", s: ":" }, { t: "kw", s: "~/portfolio" }, { t: "pf", s: "$ " }, { t: "cm", s: 'echo "scroll for more"' },
 ];
 
 const TerminalHero = () => {
